@@ -14,5 +14,5 @@ In this section, you will create **a Gateway eendpoint** to access **Amazon S3**
 
 #### Content
 
-- [Create gateway endpoint](3.1-create-gwe/)
-- [Test gateway endpoint](3.2-test-gwe/)
+- [Create gateway endpoint](5.3.1-create-gwe/)
+- [Test gateway endpoint](5.3.2-test-gwe/)

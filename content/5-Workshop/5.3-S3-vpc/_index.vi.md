@@ -14,5 +14,5 @@ Trong phần này, bạn sẽ tạo một Gateway endpoint để truy cập Amaz
 
 #### Nội dung
 
-- [Tạo gateway endpoint](3.1-create-gwe/)
-- [Test gateway endpoint](3.2-test-gwe/)
+- [Tạo gateway endpoint](5.3.1-create-gwe/)
+- [Test gateway endpoint](5.3.2-test-gwe/)
