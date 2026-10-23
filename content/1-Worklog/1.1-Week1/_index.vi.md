@@ -49,3 +49,35 @@ pre: " <b> 1.1. </b> "
 * Hoàn thành các nhiệm vụ Free Tier (EC2, Lambda, Bedrock) và nhận được credit thưởng vào tài khoản.
 
 * Làm quen với AWS Management Console: tìm kiếm và truy cập dịch vụ, chọn region.
+
+---
+
+### Khó khăn gặp phải & Cách giải quyết:
+
+| Vấn đề gặp phải | Nguyên nhân | Cách khắc phục |
+| --------------- | ----------- | -------------- |
+| **Không thể dùng các foundation model trên Amazon Bedrock ngay** | Mặc định các model bị khóa, cần yêu cầu cấp quyền trước; một số model không có sẵn ở mọi region. | Vào mục **Model access** trong Bedrock Console, gửi form yêu cầu cấp quyền (Use case submission) và chuyển sang Region hỗ trợ đầy đủ (`us-east-1` - N. Virginia). |
+| **Lỗi kết nối SSH vào EC2 (Connection timed out / Permission denied)** | Security Group chưa cho phép port 22 từ IP hiện tại hoặc phân quyền file SSH key chưa đúng. | Cập nhật Inbound Rules của Security Group cho phép port 22 với nguồn là `My IP`. Sử dụng thêm tính năng **EC2 Instance Connect** trực tiếp trên web console để kết nối nhanh chóng mà không cần phần mềm bên ngoài. |
+| **Lo ngại rủi ro phát sinh chi phí ngoài ý muốn** | Chưa quen với mô hình tính phí theo giờ và dung lượng của các dịch vụ đám mây. | Tạo thói quen kiểm tra trạng thái và **Terminate** ngay các instance EC2 sau khi hoàn tất bài thực hành; thường xuyên theo dõi mục **Billing & Cost Management Dashboard**. |
+
+---
+
+### Bài học kinh nghiệm rút ra:
+
+1. **Nguyên tắc phân quyền tối thiểu (Least Privilege & Security First):**
+   * Tuyệt đối không sử dụng tài khoản Root cho các hoạt động lập trình và cấu hình thường ngày.
+   * Kích hoạt xác thực 2 lớp (MFA) ngay từ ngày đầu tiên để bảo vệ tài khoản.
+2. **Ý thức quản trị chi phí Cloud (Cost Awareness):**
+   * Dù có credit Free Tier, việc dọn dẹp các tài nguyên sau mỗi buổi lab là nguyên tắc vàng để tránh hao hụt credit hoặc phát sinh phí vào thẻ tín dụng.
+3. **Mô hình Serverless vs Máy chủ truyền thống:**
+   * Trải nghiệm AWS Lambda giúp nhận thấy ưu thế vượt trội của Serverless khi muốn chạy các tác vụ nhanh gọn mà không tốn công cài đặt hệ điều hành, cấu hình mạng hay lo lắng về việc tắt máy chủ sau khi dùng.
+
+---
+
+### Kế hoạch tuần tiếp theo (Tuần 2):
+
+* Tìm hiểu về nền tảng mạng cốt lõi trên AWS: **Amazon VPC (Virtual Private Cloud)**, Subnet công khai / riêng tư (Public/Private Subnets), Internet Gateway và Route Tables.
+* Hoàn thiện các nhiệm vụ nhận thưởng credit Free Tier còn lại:
+  * Khởi tạo cơ sở dữ liệu quan hệ với **Amazon RDS**.
+  * Thiết lập cảnh báo chi phí tự động qua email bằng **AWS Budgets**.
+* Luyện tập kỹ năng sử dụng **AWS CLI** song song với giao diện Console.

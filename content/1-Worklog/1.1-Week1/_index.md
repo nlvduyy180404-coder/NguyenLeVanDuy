@@ -49,3 +49,35 @@ pre: " <b> 1.1. </b> "
 * Completed the Free Tier activities (EC2, Lambda, Bedrock) and received bonus credits in the account.
 
 * Became familiar with the AWS Management Console: searching for and accessing services, selecting regions.
+
+---
+
+### Challenges Encountered & Solutions:
+
+| Problem Encountered | Root Cause | Solution |
+| ------------------- | ---------- | -------- |
+| **Cannot use foundation models on Amazon Bedrock immediately** | Foundation models are locked by default and require access requests; some models are unavailable in certain regions. | Navigated to **Model access** in the Bedrock Console, submitted the use case request form, and switched to a region with broad model availability (`us-east-1` - N. Virginia). |
+| **SSH connection error to EC2 (Connection timed out / Permission denied)** | The Security Group did not allow port 22 from the current public IP, or key permissions were misconfigured. | Updated the Inbound Rules of the Security Group to allow port 22 with the source set to `My IP`. Also utilized **EC2 Instance Connect** directly from the browser console for quick and seamless browser-based SSH access. |
+| **Concern regarding unexpected cloud costs** | Unfamiliarity with hourly pay-as-you-go pricing models on cloud platforms. | Established a routine of verifying resource status and **Terminating** EC2 instances immediately after hands-on sessions; monitored the **Billing & Cost Management Dashboard** regularly. |
+
+---
+
+### Lessons Learned & Best Practices:
+
+1. **Principle of Least Privilege & Security First:**
+   * Never use the AWS Root account for everyday development and administrative tasks.
+   * Enforce Multi-Factor Authentication (MFA) from day one to protect cloud assets.
+2. **Cost Awareness on Cloud:**
+   * Even with Free Tier credits, cleaning up resources after every lab session is a fundamental discipline for a Cloud Engineer to prevent credit exhaustion or unexpected credit card billing.
+3. **Serverless Architecture vs Traditional Virtual Servers:**
+   * Experiencing AWS Lambda demonstrated the distinct advantage of serverless computing: rapid deployment without the burden of OS provisioning, network plumbing, or worrying about shutting down idle servers.
+
+---
+
+### Plan for Next Week (Week 2):
+
+* Study fundamental cloud networking on AWS: **Amazon VPC (Virtual Private Cloud)**, Public/Private Subnets, Internet Gateways, and Route Tables.
+* Complete remaining Free Tier bonus challenges:
+  * Launch and configure a relational database using **Amazon RDS**.
+  * Configure automated cost alerts and budgets via **AWS Budgets**.
+* Practice AWS command-line workflows with **AWS CLI** in parallel with the Console.
