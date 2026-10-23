@@ -8,28 +8,22 @@ chapter: false
     
 # Internship Report
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
-
 ### Student Information:
 &emsp; **Full Name:** Nguyen Le Van Duy
 
-&emsp; **Phone Number:** 0989888999 
+&emsp; **Phone Number:** 0961417690
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Email:** nlvduyy180404@gmail.com
 
-&emsp; **University:** Ho Chi Minh City University of Technology and Education
+&emsp; **University:** FPT University
 
 &emsp; **Major:** Information Technology
-
-&emsp; **Class:** AWS082025
 
 &emsp; **Internship Company:** Amazon Web Services Viet Nam Company Limited
 
 &emsp; **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Internship Duration:** From 12/08/2025 to 12/11/2025
+&emsp; **Internship Duration:** From 14/09/2026 to 14/12/2026
 
 ![Your profile picture](/images/avatar.png)
 
