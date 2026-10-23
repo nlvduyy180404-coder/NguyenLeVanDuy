@@ -1,59 +1,40 @@
 ---
 title: "Worklog Tuần 1"
-date: 2024-01-01
+date: 2026-09-14
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 1:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Làm quen với các thành viên và nắm nội quy thực tập tại First Cloud AI Journey.
+* Tìm hiểu chương trình AWS Free Tier mới (2025) và tạo tài khoản AWS.
+* Thiết lập bảo mật cơ bản cho tài khoản (MFA, IAM user).
+* Thực hành lần đầu với các dịch vụ: Amazon EC2, AWS Lambda, Amazon Bedrock.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | -------------- |
+| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập | 14/09/2026 | 14/09/2026 | |
+| 3   | - Đọc bài **"AWS Free Tier 2025: Revolution!"** để tìm hiểu Free Tier mới: <br>&emsp; + Credit khởi tạo $100, nhận thêm tối đa $100 khi hoàn thành các nhiệm vụ <br>&emsp; + Hai gói tài khoản: Free plan và Paid plan <br>&emsp; + Các dịch vụ Always Free | 15/09/2026 | 15/09/2026 | <https://aws.amazon.com/free/> |
+| 4   | - Tạo tài khoản AWS mới <br> - **Bảo mật tài khoản:** <br>&emsp; + Bật MFA cho root user <br>&emsp; + Tạo IAM user để sử dụng hằng ngày thay vì dùng root | 16/09/2026 | 16/09/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - **Thực hành Amazon EC2:** <br>&emsp; + Khởi chạy (launch) một EC2 instance <br>&emsp; + Dừng và terminate instance sau khi thử nghiệm để tránh phát sinh chi phí | 17/09/2026 | 17/09/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - **Thực hành AWS Lambda:** tạo Lambda function và bật Function URL để gọi qua trình duyệt <br> - **Thực hành Amazon Bedrock:** gửi prompt thử nghiệm trên Bedrock playground | 18/09/2026 | 18/09/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 1:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hiểu cách hoạt động của chương trình AWS Free Tier mới: credit khởi tạo, credit thưởng khi hoàn thành nhiệm vụ, sự khác nhau giữa Free plan và Paid plan.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Tạo thành công tài khoản AWS và áp dụng các bước bảo mật cơ bản:
+  * Bật MFA cho root user
+  * Tạo IAM user để làm việc hằng ngày, hạn chế dùng root
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Khởi chạy và terminate thành công một EC2 instance, hiểu được việc cần dọn dẹp tài nguyên sau khi dùng để tránh tốn chi phí.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Tạo được Lambda function có Function URL, hiểu khái niệm serverless – chạy code mà không cần quản lý máy chủ.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Lần đầu sử dụng Amazon Bedrock, gửi prompt và nhận phản hồi từ mô hình AI trên playground.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Làm quen với AWS Management Console: tìm kiếm và truy cập dịch vụ, chọn region.

@@ -1,57 +1,40 @@
 ---
 title: "Week 1 Worklog"
-date: 2024-01-01
+date: 2026-09-14
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 1 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Get to know the team members and the internship rules at First Cloud AI Journey.
+* Learn about the new AWS Free Tier program (2025) and create an AWS account.
+* Set up basic account security (MFA, IAM user).
+* Get first hands-on experience with Amazon EC2, AWS Lambda and Amazon Bedrock.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| 2   | - Get acquainted with FCAJ members <br> - Read and take note of the internship rules and regulations | 14/09/2026 | 14/09/2026 | |
+| 3   | - Read **"AWS Free Tier 2025: Revolution!"** to learn about the new Free Tier: <br>&emsp; + $100 sign-up credit, up to $100 more by completing activities <br>&emsp; + Two account plans: Free plan and Paid plan <br>&emsp; + Always Free services | 15/09/2026 | 15/09/2026 | <https://aws.amazon.com/free/> |
+| 4   | - Create a new AWS account <br> - **Account security:** <br>&emsp; + Enable MFA on the root user <br>&emsp; + Create an IAM user for daily work instead of using root | 16/09/2026 | 16/09/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - **Amazon EC2 practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Stop and terminate the instance after testing to avoid charges | 17/09/2026 | 17/09/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - **AWS Lambda practice:** create a Lambda function and enable a Function URL to call it from the browser <br> - **Amazon Bedrock practice:** send a test prompt in the Bedrock playground | 18/09/2026 | 18/09/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 1 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Understood how the new AWS Free Tier works: sign-up credit, bonus credit for completing activities, and the difference between the Free plan and the Paid plan.
 
-* Successfully created and configured an AWS Free Tier account.
+* Successfully created an AWS account and applied basic security practices:
+  * Enabled MFA on the root user
+  * Created an IAM user for daily work to avoid using root
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Successfully launched and terminated an EC2 instance, and learned the importance of cleaning up resources to avoid unexpected costs.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Created a Lambda function with a Function URL and understood the serverless concept – running code without managing servers.
 
-* Used AWS CLI to perform basic operations such as:
+* Used Amazon Bedrock for the first time, sending a prompt and receiving a response from an AI model in the playground.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Became familiar with the AWS Management Console: searching for and accessing services, selecting regions.
