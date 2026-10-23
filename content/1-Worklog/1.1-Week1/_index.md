@@ -8,54 +8,150 @@ pre: " <b> 1.1. </b> "
 
 ### Week 1 Objectives:
 
-* Get to know the team members and the internship rules at First Cloud AI Journey.
-* Learn about the new AWS Free Tier program (2025) and create an AWS account.
-* Set up basic account security (MFA, IAM user).
-* Get first hands-on experience with Amazon EC2, AWS Lambda and Amazon Bedrock.
-* Complete Free Tier activities to earn bonus credits.
+* Get acquainted with team members and understand internship regulations at First Cloud AI Journey (FCAJ).
+* Explore the revamped **AWS Free Tier 2025** program and credit redemption pathways.
+* Create a personal AWS account and establish core security baselines (MFA, IAM User).
+* Provision and clean up a first virtual server with **Amazon EC2**.
+* Experiment with serverless computing on **AWS Lambda** and generative AI on **Amazon Bedrock**.
+* Complete onboarding milestone activities to claim initial promotional credits.
 
-### Tasks to be carried out this week:
-| Day | Task | Start Date | Completion Date | Reference Material |
-| --- | ---- | ---------- | --------------- | ------------------ |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of the internship rules and regulations | 14/09/2026 | 14/09/2026 | |
-| 3   | - Read **"AWS Free Tier 2025: Revolution!"** to learn about the new Free Tier: <br>&emsp; + $100 sign-up credit, up to $100 more by completing activities <br>&emsp; + Two account plans: Free plan and Paid plan <br>&emsp; + Always Free services <br>&emsp; + Credit-earning activities: EC2, RDS, Lambda, Bedrock, AWS Budgets | 15/09/2026 | 15/09/2026 | <https://aws.amazon.com/free/> |
-| 4   | - Create a new AWS account <br> - Select a working region in the AWS Console <br> - **Account security:** <br>&emsp; + Install an authenticator app on the phone <br>&emsp; + Enable MFA on the root user <br>&emsp; + Create an IAM user for daily work instead of using root | 16/09/2026 | 16/09/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - **Amazon EC2 practice:** <br>&emsp; + Choose an AMI (operating system for the instance) <br>&emsp; + Choose a Free Tier eligible instance type <br>&emsp; + Configure a Security Group: open port 22 (SSH) and port 80 (HTTP) <br>&emsp; + Launch the instance and connect to it <br>&emsp; + Run basic commands on the instance <br>&emsp; + Stop and terminate the instance after testing to avoid charges | 17/09/2026 | 17/09/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **AWS Lambda practice:** <br>&emsp; + Create a Lambda function using the Node.js runtime <br>&emsp; + Modify the code to return a custom response <br>&emsp; + Enable a Function URL and invoke the function from the browser <br> - **Amazon Bedrock practice:** <br>&emsp; + Request model access <br>&emsp; + Send prompts and compare responses from several different models in the playground <br> - Check the bonus credits received after completing the Free Tier activities | 18/09/2026 | 18/09/2026 | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Weekly Task Summary:
+
+| Day | Primary Tasks | Start Date | Completion Date | Reference Material |
+| --- | ------------- | ---------- | --------------- | ------------------ |
+| **2** | **Onboarding & Internship Orientation:** Meet FCAJ team members, review program rules, expectations, and roadmap. | 14/09/2026 | 14/09/2026 | Internal FCAJ Docs |
+| **3** | **Explore AWS Free Tier 2025:** Study *"AWS Free Tier 2025: Revolution!"*, understand credit allocation and Free vs Paid account plans. | 15/09/2026 | 15/09/2026 | [AWS Free Tier 2025](https://aws.amazon.com/free/) |
+| **4** | **AWS Account Setup & Hardening:** Register account, activate MFA for the root user, create daily IAM User. | 16/09/2026 | 16/09/2026 | [AWS IAM Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) |
+| **5** | **Hands-on with Amazon EC2:** Launch an EC2 instance (Amazon Linux 2023), configure Security Groups, and verify connectivity. | 17/09/2026 | 17/09/2026 | [EC2 User Guide](https://docs.aws.amazon.com/ec2/) |
+| **6** | **Serverless & GenAI Exploration:** Build a Node.js Lambda function with a Function URL; request Model Access and test prompts on Amazon Bedrock. | 18/09/2026 | 18/09/2026 | [AWS Lambda & Bedrock](https://docs.aws.amazon.com/bedrock/) |
+
+---
+
+### Detailed Technical Log:
+
+#### Monday (14/09/2026): Onboarding & Internship Orientation
+
+1. **Team Introduction & Alignment:**
+   - Attended the kickoff session for the **Workforce Bootcamp - First Cloud AI Journey** program.
+   - Connected with assigned mentors and peer intern teammates.
+2. **Reviewing Guidelines & Tooling:**
+   - Studied guidelines on maintaining the Hugo internship documentation repository.
+   - Reviewed key milestones: Weekly Worklogs, Project Proposal, Thematic Workshop, and Final Evaluation.
+   - Initialized personal development workstation (Git, Visual Studio Code).
+
+---
+
+#### Tuesday (15/09/2026): Deep Dive into AWS Free Tier 2025 Architecture
+
+1. **Core Innovations of the 2025 Free Tier Program:**
+   - Transitioned away from the legacy service-hour model (750 hours/month over 12 months) toward a **direct promotional credit model**:
+     - **Initial $100 Credit:** Automatically activated upon successful account registration.
+     - **Up to $100 Bonus Credit:** Earned by completing 5 practical hands-on activities ($20 each: EC2, RDS, Lambda, Bedrock, AWS Budgets).
+   - Dual-tier plan structure:
+     - *Free Account Plan:* 6-month validity window, ideal for educational bootcamp tracks.
+     - *Paid Account Plan:* Uncapped operational lifetime for production workloads.
+   - Curated catalog of 30+ **Always Free** tier services with perpetual baseline quotas.
+
+2. **Cost Avoidance Strategy:**
+   - Identified high-risk cost drivers to avoid during early learning (NAT Gateways, unattached Elastic IPs, provisioned high-IOPS storage).
+
+---
+
+#### Wednesday (16/09/2026): AWS Account Provisioning & IAM Hardening
+
+1. **Account Registration and Root MFA Activation:**
+   - Completed registration and global billing identity verification.
+   - Immediately accessed **IAM Console** $\rightarrow$ **Security credentials**:
+     - Configured **Multi-Factor Authentication (MFA)** on the Root user using Google Authenticator.
+     - Synchronized consecutive TOTP token codes to secure the account perimeter.
+
+2. **IAM User Provisioning (Least Privilege Principle):**
+   - Navigated to **IAM** $\rightarrow$ **Users** $\rightarrow$ **Create user**:
+     - Username: `duy-admin`
+     - Granted AWS Management Console access.
+     - Attached administrative policy: `AdministratorAccess` (managed via an Admin Group).
+   - Logged out of the Root account permanently; routed all future engineering workflows through the dedicated IAM sign-in portal (`https://<account-id>.signin.aws.amazon.com/console`).
+
+---
+
+#### Thursday (17/09/2026): Amazon EC2 Provisioning & Lifecycle Management
+
+1. **Launching the First Virtual Machine:**
+   - Selected working region: **Singapore (`ap-southeast-1`)**.
+   - Navigated to **EC2 Dashboard** $\rightarrow$ **Launch Instance**:
+     - **Name:** `Duy-Demo-EC2-Instance`
+     - **AMI:** `Amazon Linux 2023 AMI` (Free tier eligible, x86_64).
+     - **Instance Type:** `t2.micro` (or `t3.micro`).
+     - **Key pair:** Generated and securely archived `duy-ec2-key.pem`.
+   - Security Group Inbound Rules:
+     - Rule 1: **SSH (Port 22)** restricted to source `My IP`.
+     - Rule 2: **HTTP (Port 80)** open to `Anywhere (0.0.0.0/0)`.
+
+2. **Connection & Teardown Verification:**
+   - Connected via **EC2 Instance Connect** in the browser console.
+   - Executed baseline diagnostic commands:
+     ```bash
+     uname -a
+     cat /etc/os-release
+     free -m
+     ```
+   - Following milestone confirmation and credit attribution, selected **Instance state $\rightarrow$ Terminate instance** to permanently release resources and prevent idle consumption.
+
+---
+
+#### Friday (18/09/2026): Serverless with AWS Lambda & Generative AI on Amazon Bedrock
+
+1. **Serverless Function Deployment (AWS Lambda):**
+   - Navigated to **AWS Lambda Console** $\rightarrow$ **Create function**:
+     - Name: `duy-hello-serverless`
+     - Runtime: **Node.js 20.x**
+     - Architecture: `x86_64`
+   - Configured function handler logic:
+     ```javascript
+     export const handler = async (event) => {
+         const response = {
+             statusCode: 200,
+             headers: {
+                 "Content-Type": "application/json"
+             },
+             body: JSON.stringify({
+                 message: "Hello from Nguyen Le Van Duy's Lambda Serverless Function!",
+                 timestamp: new Date().toISOString(),
+                 status: "Success"
+             }),
+         };
+         return response;
+     };
+     ```
+   - Under **Configuration $\rightarrow$ Function URL**, created an unauthenticated public HTTPS endpoint. Verified instantaneous JSON responses in the web browser without managing any server runtime.
+
+2. **Generative AI Playground Testing (Amazon Bedrock):**
+   - Switched to **US East (N. Virginia - `us-east-1`)** for maximum foundation model coverage.
+   - Under **Amazon Bedrock $\rightarrow$ Model access**, submitted access requests for foundation models (Anthropic Claude, Amazon Titan).
+   - Opened **Bedrock Playgrounds $\rightarrow$ Text / Chat**:
+     - Submitted technical evaluation prompts: *"Explain the core difference between Amazon EC2 and AWS Lambda in 3 concise bullet points."*
+     - Evaluated latency, coherence, and accuracy across model variants.
+   - Successfully collected promotional credit allocations for Lambda and Bedrock milestone achievements.
+
+---
 
 ### Week 1 Achievements:
 
-* Understood how the new AWS Free Tier works: sign-up credit, bonus credit for completing activities, and the difference between the Free plan and the Paid plan.
-
-* Successfully created an AWS account and applied basic security practices:
-  * Enabled MFA on the root user with an authenticator app
-  * Created an IAM user for daily work to avoid using root
-  * Understood why the root user should not be used for everyday tasks
-
-* Learned the basic steps to create an EC2 instance:
-  * AMI: choosing the operating system for the virtual machine
-  * Instance type: CPU/RAM configuration, choosing a Free Tier eligible type
-  * Security Group: acts as a firewall, only opening required ports (22 for SSH, 80 for HTTP)
-  * Connecting to the instance and working from the command line
-  * Terminating resources after use to avoid unexpected costs
-
-* Created a Lambda function in Node.js, customized its code and invoked it via a Function URL; understood the serverless concept – running code without managing servers.
-
-* Learned how to use Amazon Bedrock:
-  * Model access must be requested before a model can be used
-  * Tried several models and observed that each one answers the same prompt differently
-
-* Completed the Free Tier activities (EC2, Lambda, Bedrock) and received bonus credits in the account.
-
-* Became familiar with the AWS Management Console: searching for and accessing services, selecting regions.
+* **Security Baselines:** Applied the Principle of Least Privilege, enabled Root MFA, and migrated all interactive sessions to dedicated IAM User credentials.
+* **Mastered Free Tier Dynamics:** Understood credit redemption pathways under the AWS Free Tier 2025 framework to safely optimize sandbox expenditures.
+* **Virtual Server Competence:** Hands-on experience configuring AMIs, instance types, key pairs, and ingress Security Group rules.
+* **Serverless Foundations:** Grasped event-driven compute architecture using AWS Lambda and Function URLs.
+* **GenAI Exposure:** Successfully requested Model Access and interacted with leading Foundation Models on Amazon Bedrock.
+* **Account Progress:** Successfully registered onboarding milestones and confirmed bonus credit balances.
 
 ---
 
 ### Challenges Encountered & Solutions:
 
-| Problem Encountered | Root Cause | Solution |
-| ------------------- | ---------- | -------- |
+| Problem Encountered | Root Cause | Solution Implemented |
+| ------------------- | ---------- | -------------------- |
 | **Cannot use foundation models on Amazon Bedrock immediately** | Foundation models are locked by default and require access requests; some models are unavailable in certain regions. | Navigated to **Model access** in the Bedrock Console, submitted the use case request form, and switched to a region with broad model availability (`us-east-1` - N. Virginia). |
 | **SSH connection error to EC2 (Connection timed out / Permission denied)** | The Security Group did not allow port 22 from the current public IP, or key permissions were misconfigured. | Updated the Inbound Rules of the Security Group to allow port 22 with the source set to `My IP`. Also utilized **EC2 Instance Connect** directly from the browser console for quick and seamless browser-based SSH access. |
 | **Concern regarding unexpected cloud costs** | Unfamiliarity with hourly pay-as-you-go pricing models on cloud platforms. | Established a routine of verifying resource status and **Terminating** EC2 instances immediately after hands-on sessions; monitored the **Billing & Cost Management Dashboard** regularly. |
@@ -76,8 +172,7 @@ pre: " <b> 1.1. </b> "
 
 ### Plan for Next Week (Week 2):
 
-* Study fundamental cloud networking on AWS: **Amazon VPC (Virtual Private Cloud)**, Public/Private Subnets, Internet Gateways, and Route Tables.
-* Complete remaining Free Tier bonus challenges:
-  * Launch and configure a relational database using **Amazon RDS**.
-  * Configure automated cost alerts and budgets via **AWS Budgets**.
-* Practice AWS command-line workflows with **AWS CLI** in parallel with the Console.
+* Install and configure **AWS CLI** locally with IAM Access Keys to operate directly from the terminal.
+* Study fundamental cloud networking on AWS: **Amazon VPC**, Public/Private Subnets, Internet Gateways, and Route Tables.
+* Practice hands-on with object storage (**Amazon S3**) and block storage (**Amazon EBS**).
+* Complete remaining Free Tier bonus challenges (**Amazon RDS** database and **AWS Budgets** alerts).
